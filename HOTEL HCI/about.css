@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color:  #222;
+    color: #1a1a1a;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header.scrolled {
+  background-color: rgba(26, 26, 26, 0.85);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-family: "Arbutus Slab", serif;
+    font-size: 18px;
+    color: #938743;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #938743;
+    text-decoration: none;
+}
+
+.hero {
+    background: url(banner3.png) center/cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #333;
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
+.hero h1 {
+    font-size: 100px;
+    color: #938743;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #2D2915 20%, #938743 23%, #938743 62%, #2D2915 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-family: "Bacasime Antique", serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    background-color: #403F3F;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 1 1 55%;
+}
+
+.intro-img {
+    width: 300px;
+    height: 600px;
+    border-radius: 50px;
+    flex: 1 1 35%;
+}
+
+.intro-text h2 {
+    color: #938743;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-family: 'Archivo Black', sans-serif;
+    line-height: 150%;
+    font-size: 2rem;
+}
+
+.intro-text p {
+    font-size: 25px;
+    line-height: 200%;
+    color: white;
+    font-family: "Bacasime Antique", serif;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.policy {
+    background-color: #222;
+    color: #eee;
+    padding: 4em 2em;
+}
+
+.policy h2 {
+    color: #938743;
+    text-align: left;
+    margin-bottom: 30px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+}
+
+.policy-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.policy-columns div {
+    flex: 1 1 30%;
+    min-width: 280px;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+}
+
+.policy-columns h4 {
+    color: #938743;
+    margin-top: 1em;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.policy-columns ul {
+    padding-left: 1.2em;
+}
+
+.policy-columns div:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 70px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Arbutus Slab", serif;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-container img {
+    width: 100px;
+    height: auto;
+    margin-right: 0px;
+}
+
+.footer-logo-container p {
+    font-size: 2.1rem;
+    font-family: "Arbutus Slab", serif;
+    color: #938743;
+    background: linear-gradient(90deg, #2D2914, #938743);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    color: transparent;     
+}
+
+.footer-contact-info .contact-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 10px;
+    font-size: 1.0rem;
+}
+
+.footer-contact-info .contact-numbers p {
+    margin: 4px 0;
+    display: flex;
+    font-size: 1.0rem;
+}
+
+.footer-contact-info .label {
+    width: 80px;
+}
+
+.footer-contact-info .number {
+    font-family: "Arbutus Slab", serif;
+    color: #ccc;
+}
+
+.footer-icon {
+    color: #938743;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    width: 20px;
+    height: 20px;
+    font-family: "Arbutus Slab", serif;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-family: "Arbutus Slab", serif;
+}
+
+.footer-right p:hover {
+    color: #938743;
+    cursor: pointer;
+}
